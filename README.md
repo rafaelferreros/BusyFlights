@@ -106,13 +106,14 @@ Random test data is generate during every execution.
 The Airports available:
     { "AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG", "CCS", "PTY", "JFK"};
 
-End points:
+**End points**
 
 **http://localhost:8080/api/busy-flights**
 
 GET: Get all the Flights available
 
 POST: Search by Origin and Destination, ordered by fare.
+```
 {
   "origin": "BBB",
   "destination": "CCS",
@@ -120,12 +121,14 @@ POST: Search by Origin and Destination, ordered by fare.
   "returnDate": "1234", //Not implemented
   "numberOfPassengers": "3" //Not implemented
 }
+```
 
 **http://localhost:8080/api/crazy-air**
 
 GET: Get all the Flights available from CrazyAir
 
 POST: Search by Origin and Destination.
+```
 {
   "origin": "BBB",
   "destination": "CCS",
@@ -133,12 +136,14 @@ POST: Search by Origin and Destination.
   "returnDate": "1234", //Not implemented
   "passengerCount": "3" //Not implemented
 }
+```
 
 **http://localhost:8080/api/tough-jet**
 
 GET: Get all the Flights available from ToughJet
 
 POST: Search by Origin and Destination.
+```
 {
   "from": "BBB",
   "to": "CCS",
@@ -146,7 +151,7 @@ POST: Search by Origin and Destination.
   "returnDate": "1234", //Not implemented
   "passengerCount": "3" //Not implemented
 }
-
+```
 ** Next Steps **
 
 ToughJetService needs to implement correctly the parse of ToughJetResponse to BusyFlightsResponse, ISO_DATE_TIME
