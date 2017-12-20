@@ -99,3 +99,64 @@ It is fine to change any of the supplied application code, if you choose to do s
 **Note**
 
 Please clone this project then create your own repository from it. Do not fork/branch this project when creating your solution as it will be visible to other applicants.
+
+
+Random test data is generate during every execution.
+
+The Airports available:
+    { "AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG", "CCS", "PTY", "JFK"};
+
+End points:
+
+**http://localhost:8080/api/busy-flights**
+
+GET: Get all the Flights available
+
+POST: Search by Origin and Destination, ordered by fare.
+{
+  "origin": "BBB",
+  "destination": "CCS",
+  "departureDate": "1234", //Not implemented
+  "returnDate": "1234", //Not implemented
+  "numberOfPassengers": "3" //Not implemented
+}
+
+**http://localhost:8080/api/crazy-air**
+
+GET: Get all the Flights available from CrazyAir
+
+POST: Search by Origin and Destination.
+{
+  "origin": "BBB",
+  "destination": "CCS",
+  "departureDate": "1234", //Not implemented
+  "returnDate": "1234", //Not implemented
+  "passengerCount": "3" //Not implemented
+}
+
+**http://localhost:8080/api/tough-jet**
+
+GET: Get all the Flights available from ToughJet
+
+POST: Search by Origin and Destination.
+{
+  "from": "BBB",
+  "to": "CCS",
+  "departureDate": "1234", //Not implemented
+  "returnDate": "1234", //Not implemented
+  "passengerCount": "3" //Not implemented
+}
+
+** Next Steps **
+
+ToughJetService needs to implement correctly the parse of ToughJetResponse to BusyFlightsResponse, ISO_DATE_TIME
+
+Having this implementation complete, it is possible to finish the following classes:
+CrazyFlihtSpecifications Class, adding predicates related to Dates.
+ToughJetFlightSpecification Class, adding predicates related to Dates.
+
+Unit Tests.
+Error Management.
+Logs.
+
+

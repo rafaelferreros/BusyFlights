@@ -70,14 +70,6 @@ public class ToughJetService implements BusyFlightsAdapter<ToughJetResponse, Tou
         response.setDepartureAirportCode(toughJetResponse.getDepartureAirportName());
         response.setDestinationAirportCode(toughJetResponse.getArrivalAirportName());
 
-        /*LocalDateTime departure = LocalDateTime.parse(toughJetResponse.getOutboundDateTime(),
-                DateTimeFormatter.ISO_INSTANT);
-        response.setDepartureDate(departure.format(DateTimeFormatter.ISO_DATE_TIME));
-
-        LocalDateTime arrival = LocalDateTime.parse(toughJetResponse.getInboundDateTime(),
-                DateTimeFormatter.ISO_INSTANT);
-        response.setArrivalDate(arrival.format(DateTimeFormatter.ISO_DATE_TIME));
-*/
         //TODO: needs to fix the date to ISO_DATE_TIME format
         response.setDepartureDate(toughJetResponse.getOutboundDateTime());
         response.setArrivalDate(toughJetResponse.getInboundDateTime());
